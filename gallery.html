@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+  <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+  <h1 class="gallery-title">🖼️ Photo Gallery</h1>
+
+  <!-- 1. Travel -->
+  <section class="gallery-category">
+    <h2>🫂 Me, Family and Friends</h2>
+    <div class="gallery-grid">
+      <img src="aphoto1.jpg" alt="Photo 1" class="zoomable" />
+      <img src="aphoto2.jpg" alt="Photo 2" class="zoomable" />
+      <img src="aphoto3.jpg" alt="Photo 3" class="zoomable" />
+      <img src="aphoto4.jpg" alt="Photo 4" class="zoomable" />
+      <img src="aphoto5.jpg" alt="Photo 5" class="zoomable" />
+    </div>
+  </section>
+
+  <!-- 2. Food -->
+  <section class="gallery-category">
+    <h2>🍱 Food & Drink</h2>
+    <div class="gallery-grid">
+      <img src="bphoto1.jpg" alt="Food 1" class="zoomable" />
+      <img src="bphoto2.jpg" alt="Food 2" class="zoomable" />
+      <img src="bphoto3.jpg" alt="Food 3" class="zoomable" />
+      <img src="bphoto4.jpg" alt="Food 4" class="zoomable" />
+      <img src="bphoto6.jpg" alt="Food 6" class="zoomable" />
+    </div>
+  </section>
+
+  <!-- 3. Events -->
+  <section class="gallery-category">
+    <h2>🎉 Gaming Events & Experiences</h2>
+    <div class="gallery-grid">
+      <img src="event1.jpg" alt="Event 1" class="zoomable" />
+      <img src="event2.jpg" alt="Event 2" class="zoomable" />
+      <img src="event5.jpg" alt="Event 5" class="zoomable" />
+      <img src="event7.jpg" alt="Event 7" class="zoomable" />
+      <img src="event8.jpg" alt="Event 8" class="zoomable" />
+    </div>
+  </section>
+
+  <!-- 4. Random Aesthetic -->
+  <section class="gallery-category">
+    <h2>🎨 Photographing</h2>
+    <div class="gallery-grid">
+      <img src="photographing5.jpg" alt="Aesthetic 5" class="zoomable" />
+      <img src="photographing7.jpg" alt="Aesthetic 7" class="zoomable" />
+      <img src="photographing8.jpg" alt="Aesthetic 8" class="zoomable" />
+      <img src="photographing9.jpg" alt="Aesthetic 9" class="zoomable" />
+      <img src="photographing10.jpg" alt="Aesthetic 10" class="zoomable" />
+    </div>
+  </section>
+
+<div class="footer">
+  &copy; 2025 MUHAMAD KHAIRI HAKEMI. All rights reserved. <br>
+  Disclaimer: This website is for academic purposes only.
+</div>
+
+<script>
+  // Create the lightbox overlay
+  const overlay = document.createElement('div');
+  overlay.classList.add('lightbox-overlay');
+  document.body.appendChild(overlay);
+
+  const img = document.createElement('img');
+  overlay.appendChild(img);
+
+  // Function to show the image
+  document.querySelectorAll('img').forEach(image => {
+    image.addEventListener('click', () => {
+      img.src = image.src;
+      overlay.style.display = 'flex';
+    });
+  });
+
+  // Close on click outside
+  overlay.addEventListener('click', () => {
+    overlay.style.display = 'none';
+  });
+</script>
+
+</body>
+</html>
